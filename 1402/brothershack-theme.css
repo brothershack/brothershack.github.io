@@ -1,0 +1,263 @@
+
+/* BROTHERSHACK shared host theme for Firmware 14.02 */
+html, body {
+    min-height: 100%;
+    background: #000 url("../505/img.jpg") center center / 100% 100% fixed no-repeat !important;
+    color: #fff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+body, body.bg-gray-900 {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+.mainContainer { background: transparent !important; color: #fff !important; }
+#initial-screen {
+    min-height: 100vh !important;
+    padding: 82px 18px 55px !important;
+    justify-content: flex-start !important;
+    background: transparent !important;
+}
+.brothershack-page-heading {
+    width: min(100%, 980px);
+    text-align: center;
+    margin: 0 auto 28px;
+}
+.brothershack-page-heading h1 {
+    color: #fff !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    text-shadow: .1em .1em .2em #000 !important;
+    margin: 0 0 12px !important;
+}
+.brothershack-page-heading hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.7);
+    margin: 10px auto 16px;
+}
+.brothershack-back-link {
+    display: inline-block;
+    background: #003263;
+    color: #fff !important;
+    padding: 9px 18px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-size: 16px;
+}
+.brothershack-back-link:hover { background: #0069d9; }
+#pslogo { margin-top: 6px; }
+#ps-logo-container { background: rgba(0,50,99,.42) !important; border: 1px solid rgba(255,255,255,.22); }
+#click-to-start-text, #PS4FW { color: #fff !important; text-shadow: 1px 1px 3px #000; }
+#choosejb-initial, #exploit-status-panel, #payloadsSection,
+#exploit-main-screen .bg-gray-800, .bg-gray-800 {
+    background: rgba(0, 25, 55, .88) !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    color: #fff !important;
+}
+button, .settings-btn, .about-btn, .theme-btn, #updateCache, #exploitRun {
+    cursor: pointer;
+}
+#initial-screen button:not(#pslogo):not(#scrollDown),
+#exploit-main-screen button,
+#payloadsSection button {
+    border-radius: 4px !important;
+}
+#exploit-main-screen {
+    background: transparent !important;
+    padding: 20px !important;
+}
+#exploit-status-panel, #payloadsSection {
+    box-shadow: 0 3px 14px rgba(0,0,0,.35);
+}
+#DebugConsole { background: rgba(0,0,0,.78) !important; }
+#exploit-main-screen h2, #exploit-main-screen h3,
+#payloadsSection h2, #payloadsSection h3 { color: #fff !important; }
+a { color: #fff; }
+@media (max-width: 700px) {
+    #initial-screen { padding: 76px 12px 45px !important; }
+    .brothershack-page-heading h1 { font-size: 21px !important; }
+    #exploit-main-screen { padding: 10px !important; }
+    #exploit-status-panel, #payloadsSection { padding: 14px !important; }
+}
+
+/* BROTHERSHACK 14.02 layout refinements */
+.brothershack-last-update-banner {
+    width: min(94%, 900px);
+    margin: 0 auto 24px;
+    text-align: center;
+}
+.brothershack-last-update-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    margin: 0 auto;
+    border: 1px solid rgba(0,174,255,.8);
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0,145,255,.35);
+}
+#pslogo {
+    margin-top: 34px !important;
+    margin-bottom: 12px !important;
+    order: 5;
+}
+#ps-logo-container {
+    background: linear-gradient(135deg, rgba(0,90,170,.82), rgba(0,190,255,.22)) !important;
+    border: 2px solid #00b7ff !important;
+    box-shadow: 0 0 20px rgba(0,160,255,.45);
+}
+#ps-logo { fill: #20c8ff !important; }
+#choosejb-initial, #henSelection,
+#goldhen-label-initial, #PS4HEN-label-initial,
+#goldhen-label-exploit, #PS4HEN-label-exploit,
+#nexHEN-label-initial, #nexHEN-label-exploit {
+    display: none !important;
+}
+#click-to-start-text {
+    margin-top: 14px !important;
+}
+@media (max-width: 700px) {
+    .brothershack-last-update-banner { width: 96%; margin-bottom: 18px; }
+    .brothershack-last-update-banner img { max-height: 240px; }
+    #pslogo { margin-top: 24px !important; }
+}
+
+/* Minimal 14.02 screen: keep the Last Update artwork and the PS activation button only. */
+#initial-screen > header,
+#initial-screen > .brothershack-page-heading,
+#click-to-start-text,
+#stopAutoJb,
+#PS4FW,
+#choosejb-initial,
+#initial-screen > .secondHostBtn,
+#exploit-main-screen,
+#payloadsSection,
+#scrollDown,
+#scrollDownBtn,
+#successRate,
+#henSelection {
+    display: none !important;
+}
+#initial-screen {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding: 18px 12px !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+.brothershack-last-update-banner {
+    width: min(96vw, 1100px) !important;
+    margin: 0 auto !important;
+}
+.brothershack-last-update-banner img {
+    width: 100% !important;
+    max-height: 72vh !important;
+    object-fit: contain !important;
+}
+#pslogo {
+    display: flex !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 54% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 30 !important;
+}
+#ps-logo-container {
+    padding: 12px !important;
+    width: 112px !important;
+    height: 112px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+}
+#ps-logo {
+    width: 78px !important;
+    height: 78px !important;
+}
+@media (max-width: 700px) {
+    #initial-screen { padding: 10px 6px !important; }
+    .brothershack-last-update-banner img { max-height: 76vh !important; }
+    #pslogo { top: 54% !important; }
+    #ps-logo-container { width: 88px !important; height: 88px !important; }
+    #ps-logo { width: 62px !important; height: 62px !important; }
+}
+
+
+/* FINAL FIX: one full-screen Last Update artwork, no duplicated page layers */
+html, body {
+    width: 100% !important;
+    min-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #020916 !important;
+    background-image: url("../g2all/brothershack-last-update.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 100% 100% !important;
+    overflow: hidden !important;
+}
+body, body.bg-gray-900, .mainContainer, #initial-screen {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+.mainContainer, #initial-screen {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+.brothershack-last-update-banner,
+#initial-screen > .brothershack-page-heading,
+#initial-screen > header,
+#click-to-start-text,
+#stopAutoJb,
+#PS4FW,
+#choosejb-initial,
+#initial-screen > .secondHostBtn,
+#exploit-main-screen,
+#payloadsSection,
+#scrollDown,
+#scrollDownBtn,
+#successRate,
+#henSelection {
+    display: none !important;
+}
+#pslogo {
+    display: flex !important;
+    position: fixed !important;
+    left: 50% !important;
+    top: 54% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 9999 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+#ps-logo-container {
+    width: 104px !important;
+    height: 104px !important;
+    padding: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background: rgba(0, 165, 255, .24) !important;
+    border: 2px solid rgba(0, 210, 255, .9) !important;
+    box-shadow: 0 0 22px rgba(0, 190, 255, .55) !important;
+}
+#ps-logo {
+    width: 72px !important;
+    height: 72px !important;
+    fill: #19c9ff !important;
+}
+@media (max-width: 700px) {
+    #pslogo { top: 54% !important; }
+    #ps-logo-container { width: 78px !important; height: 78px !important; }
+    #ps-logo { width: 54px !important; height: 54px !important; }
+}
